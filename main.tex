@@ -253,7 +253,7 @@ CS22BTECH11060
 
 % make the title area
 \maketitle
-\textbf{5.)Question:} The probability that a bulb produced by a factory will fuse after 150 days of use
+\textcolor{cyan}{\textbf{5.)Question:}}The probability that a bulb produced by a factory will fuse after 150 days of use
 is 0.05. Find the probability that out of 5 such bulbs
 \begin{enumerate}
 \item  none
@@ -263,34 +263,45 @@ is 0.05. Find the probability that out of 5 such bulbs
 \end{enumerate}
 will fuse after 150 days of use.
 
-\textbf{Solution:}
+\textcolor{cyan}{\textbf{Solution:}}
 Let the \textbf{Probability} of $i^{th}$ bulb to fuse after 150 days of use be $P(i)$.\\
 $P(i)=0.05 $ $\forall{i} \in{\{1,2,3,4,5\}}$\\
-Probability of one bulb getting fused is independ\textbf{}ent of another\\
+Probability of one bulb getting fused is independent of another\\
 \begin{enumerate}
-\item  Probability that none of the 5 bulbs fuses is: \[
-P(\bar{1}\cap\bar{2}\cap\bar{3}\cap\bar{4}\cap\bar{5})=\prod_{i=1}^{i=5}(1-P(i))\]
-\[
-=(1-0.05)^5\\=0.95^5
-\]
-$$=0.7737809375$$
+\item  Probability that none of the 5 bulbs fuses is: \begin{align}
+P(\bar{1}\cap\bar{2}\cap\bar{3}\cap\bar{4}\cap\bar{5})=\prod_{i=1}^{i=5}(1-P(i))\end{align}
+using equation (1)
+\begin{align}\nonumber
+=(1-0.05)^5 =0.95^5
+\end{align}
+\begin{align}\nonumber=0.7737809375\end{align}
 \item Probability that not more than one bulb fuses is same as exactly 0 bulb fuses or exactly one bulb fuses:\\
-Probability of no bulb to fuse is:$(0.95)^5$\\
-Probability of exactly one bulb to fuse is:\[
+Probability of no bulb to fuse is:\begin{align}\nonumber(0.95)^5\end{align}
+Probability of exactly one bulb to fuse is:\begin{align}
 {5\choose{1}} \times  P(1\cap\bar{2}\cap\bar{3}\cap\bar{4}\cap\bar{5})
-\](choosing which bulb is defective)\\\[
+\end{align}(choosing which bulb is defective)\\
+using equation (2)
+\begin{align}\nonumber
 =5\times (0.95)^4\times0.05=0.2036265625
-\]
-\item Probability that more than one bulb will fuse will be:\\
-=1-Probability that no bulb is fused-Probability that exactly one bulb is fused
-
-\[
+\end{align}
+\item Let A be event that none of the bulbs is fused and B be event that exactly one bulb is fused\\ Probability that more than one bulb will fuse will be:\\
+\begin{align}
+=1-P(A)-P(B)
+\end{align}
+using equation (3)
+\begin{align}\nonumber
 =1-(0.95)^5-5\times0.05\times(0.95)^4
-\]
-$$=0.0225925$$
-\item Probability that at least one bulb is fused is 1 - Probability that no bulb is fused:\[
-= 1-(0.95)^5
-= 0.2262190625\]
+\end{align}
+
+\begin{align}\nonumber=0.0225925\end{align}
+\item Probability that at least one bulb is fused is \begin{align}1 - \text{Probability that no bulb is fused}
+\end{align}
+using equation (4)
+\begin{align}\nonumber
+    = 1-(0.95)^5
+= 0.2262190625
+\end{align}
+
 
 \end{enumerate}
 \newpage
