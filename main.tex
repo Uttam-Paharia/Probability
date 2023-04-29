@@ -255,7 +255,7 @@ CS22BTECH11060
 % make the title area
 \maketitle
 \textcolor{cyan}{\textbf{5.)Question:}}The probability that a bulb produced by a factory will fuse after 150 days of use
-is 0.05. Find the probability that out of 5 such bulbs
+is $0.05$. Find the probability that out of 5 such bulbs
 \begin{enumerate}
 \item  none
 \item not more than one
@@ -268,8 +268,15 @@ will fuse after 150 days of use.
 Let the \textbf{Probability} of $i$ bulb to fuse after 150 days of use be $\pr{i}$.\\
 Probability of a bulb to fuse after 150 days is =$0.05$
 Probability of one bulb getting fused is independent of another\\
+Let\begin{align}
+    p&=0.05\\
+    q&=1-p=0.95
+\end{align}
 Let Cumulative Distributive Function be:
 \begin{align} F_X(i)=Pr(X\leq i)
+\end{align}
+\begin{align}
+    F_X(i)=\sum_{r=0}^i\comb{5}{r}p^rq^{5-r}
 \end{align}
 \begin{align}
    &F_X(0)=Pr(X=0)=\pr{{1}^\prime{2}^\prime{3}^\prime{4}^\prime{5}^\prime}=\prod_{i=1}^{i=5}(1-\pr{i})\\
