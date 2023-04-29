@@ -115,7 +115,8 @@ columns=fullflexible
 
 
 \newcommand{\define}{\stackrel{\triangle}{=}}
-
+\newcommand{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand{\comb}[1][-1mu]{\permcomb[#1]{C}}
 
 %\bibliographystyle{ieeetr}
 
@@ -264,42 +265,51 @@ is 0.05. Find the probability that out of 5 such bulbs
 will fuse after 150 days of use.
 
 \textcolor{cyan}{\textbf{Solution:}}
-Let the \textbf{Probability} of $i^{th}$ bulb to fuse after 150 days of use be $\pr{i}$.\\
-$\pr{i}=0.05 $ $\forall{i} \in{\{1,2,3,4,5\}}$\\
+Let the \textbf{Probability} of $i$ bulb to fuse after 150 days of use be $\pr{i}$.\\
+Probability of a bulb to fuse after 150 days is =$0.05$
 Probability of one bulb getting fused is independent of another\\
-\begin{enumerate}
-\item  Probability that none of the 5 bulbs fuses is: \begin{align}\label{eq:1}
-\pr{\bar{1}\cap\bar{2}\cap\bar{3}\cap\bar{4}\cap\bar{5}}=\prod_{i=1}^{i=5}(1-\pr{i}\end{align}
-form \eqref{eq:1}
-\begin{align}\nonumber
-=(1-0.05)^5 =0.95^5
+Let Cumulative Distributive Function be:
+\begin{align} F_X(i)=Pr(X\leq i)
 \end{align}
-\begin{align}\nonumber=0.7737809375\end{align}
-\item Probability that not more than one bulb fuses is same as exactly 0 bulb fuses or exactly one bulb fuses:\\
-Probability of no bulb to fuse is:\begin{align}\nonumber(0.95)^5\end{align}
-Probability of exactly one bulb to fuse is:\begin{align}
-\label{eq:2}
-{5\choose{1}} \times  \pr{1\cap\bar{2}\cap\bar{3}\cap\bar{4}\cap\bar{5}}
-\end{align}(choosing which bulb is defective)\\
-form \eqref{eq:2}
-\begin{align}\nonumber
-=5\times (0.95)^4\times0.05=0.2036265625
-\end{align}
-\item Let A be event that none of the bulbs is fused and B be event that exactly one bulb is fused\\ Probability that more than one bulb will fuse will be:\\
 \begin{align}
-\label{eq:3}
-=1-\pr{A}-\pr{B}
+   &F_X(0)=Pr(X=0)=\pr{{1}^\prime{2}^\prime{3}^\prime{4}^\prime{5}^\prime}=\prod_{i=1}^{i=5}(1-\pr{i})\\
+    &=0.95^5=0.7737809375
 \end{align}
-form \eqref{eq:3}
-\begin{align}\nonumber
-=1-(0.95)^5-5\times0.05\times(0.95)^4
+\begin{align}
+    F_X(1)&=F_X(0)+Pr(X=1)\\
+&=(0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4
 \end{align}
 
-\begin{align}\nonumber=0.0225925\end{align}
-\item Probability that at least one bulb is fused is \begin{align}\label{eq:4}1 - \text{Probability that no bulb is fused}
+\begin{align}
+F_X(2) &= F_X(1)+Pr(X=2)\\
+       &= (0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4\\
+       &+{\comb{5}{2}}\times(0.5)^2\times(0.95)^3
 \end{align}
-form \eqref{eq:4}
-\begin{align}\nonumber
+\begin{align}
+    F_X(6)=1
+\end{align}
+\begin{enumerate}
+\item  Probability that none of the 5 bulbs fuses is: \begin{align}\label{eq:10}
+F_X(0) \end{align}
+form \eqref{eq:10}
+\begin{align}
+&=0.95^5\\
+&=0.7737809375\end{align}
+\item Probability that not more than one bulb fuses is same as exactly 0 bulb fuses or exactly one bulb fuses:\\
+\begin{align}
+    F_X(1)=0.9774075
+\end{align}
+
+\item Let A be event that none of the bulbs is fused and B be event that exactly one bulb is fused\\ Probability that more than one bulb will fuse will be:\\
+
+\begin{align}\label{eq:14}F_X(6)-F_X(1)\end{align}
+form \eqref{eq:14}
+
+\begin{align}=0.0225925\end{align}
+\item Probability that at least one bulb is fused is \begin{align}\label{eq:16}F_X(6)-F_X(0)
+\end{align}
+form \eqref{eq:16}
+\begin{align}
     = 1-(0.95)^5
 = 0.2262190625
 \end{align}
