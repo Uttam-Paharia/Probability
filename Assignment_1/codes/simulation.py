@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import bernoulli
 from scipy.stats import norm
 from scipy.stats import binom
-simlen=10000
+simlen=10000000
 #number of bulbs
 n =  5
 
@@ -15,10 +15,7 @@ experiment=np.zeros(4)
 acctual=np.zeros(4)
 data_binom = binom.rvs(n,p,size=simlen)  #Simulating the event of jumping 10 hurdles
 defects,stimulation = np.unique(data_binom , return_counts= True)
-while np.size(defects) < 6:
-    defects = np.append(defects , defects[np.size(defects) -1] + 1)
-while np.size(stimulation) < 6:
-    stimulation = np.append(stimulation , 0)
+
 stimulation = np.cumsum(stimulation)/simlen
 
 experiment[0]=stimulation[0] 
