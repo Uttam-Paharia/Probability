@@ -26,5 +26,8 @@ acctual[0]=binom.cdf(0,n,p)
 acctual[1]=binom.cdf(1,n,p)
 acctual[2]=binom.cdf(5,n,p)-binom.cdf(1,n,p)
 acctual[3]=binom.cdf(5,n,p)-binom.cdf(0,n,p)
-for i in range(4):
-    print("For experiment "+str(i+1)+" stimulation value is "+str(experiment[i])+" and acctual value is "+str(acctual[i]))
+
+print("For answer 1 stimulation value is "+str(experiment[0])+" and acctual value is "+str(acctual[0]))
+print("For answer 2 stimulation value is "+str(experiment[1])+" and acctual value is "+str(acctual[1]))
+print("For answer 3 stimulation value is "+str(experiment[2])+" and acctual value is "+str(acctual[2]))
+print("For answer 4 stimulation value is "+str(experiment[3])+" and acctual value is "+str(acctual[3]))
