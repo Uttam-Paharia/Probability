@@ -295,24 +295,24 @@ F_X(2)&= (0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4\\
 \end{align}
 \begin{enumerate}
 \item  Probability that none of the 5 bulbs fuses is: \begin{align}\label{eq:10}
-    Pr(0)=F_X(0) \end{align}
+    Pr(X=0)=F_X(0) \end{align}
 form \eqref{eq:10}
 \begin{align}
 &=0.95^5\\
 &=0.7737809375\end{align}
 \item Probability that not more than one bulb fuses is same as exactly 0 bulb fuses or exactly one bulb fuses:\\
 \begin{align}
-    Pr(0)+Pr(1)=F_X(1)=0.9774075
+    Pr(X\leq1)=F_X(1)=0.9774075
 \end{align}
 
 \item Let A be event that none of the bulbs is fused and B be event that exactly one bulb is fused\\ Probability that more than one bulb will fuse will be:\\
 
-\begin{align}\label{eq:14}\sum_{i=2}^{i=6}Pr(i)=F_X(6)-F_X(1)\end{align}
+\begin{align}\label{eq:14}Pr(X\leq 6)-Pr(X\leq 1)=F_X(6)-F_X(1)\end{align}
 form \eqref{eq:14}
 
 \begin{align}=0.0225925\end{align}
 \item Probability that at least one bulb is fused is
- \begin{align}\label{eq:16}&\sum_{i=1}^{i=6}Pr(i)\\
+ \begin{align}\label{eq:16}&Pr(X\leq 6)-Pr(X\leq 0)=\
     &=F_X(6)-F_X(0)
 \end{align}
 form \eqref{eq:16}
