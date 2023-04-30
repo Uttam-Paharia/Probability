@@ -273,23 +273,21 @@ Let\begin{align}
     q&=1-p=0.95
 \end{align}
 Let Cumulative Distributive Function be:
-\begin{align} F_X(i)=Pr(X\leq i)
+\begin{align} F_X(i)&=Pr(X\leq i)\\
+Pr(X=i)&=\comb{5}{i}p^iq^{5-i}
 \end{align}
 \begin{align}
-    F_X(i)=\sum_{r=0}^i\comb{5}{r}p^rq^{5-r}
+ \therefore   F_X(i)=\sum_{r=0}^i\comb{5}{r}p^rq^{5-r}
 \end{align}
 \begin{align}
-   &F_X(0)=Pr(X=0)=\pr{{1}^\prime{2}^\prime{3}^\prime{4}^\prime{5}^\prime}=\prod_{i=1}^{i=5}(1-\pr{i})\\
-    &=0.95^5=0.7737809375
+   F_X(0)=0.95^5=0.7737809375
 \end{align}
 \begin{align}
-    F_X(1)&=F_X(0)+Pr(X=1)\\
-&=(0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4
+    F_X(1)=(0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4
 \end{align}
 
 \begin{align}
-F_X(2) &= F_X(1)+Pr(X=2)\\
-       &= (0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4\\
+F_X(2)&= (0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4\\
        &+{\comb{5}{2}}\times(0.5)^2\times(0.95)^3
 \end{align}
 \begin{align}
