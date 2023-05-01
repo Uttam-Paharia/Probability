@@ -274,8 +274,8 @@ Let\begin{align}
 \end{align}
 Let X be a random variable\\
 Let Cumulative Distributive Function be:
-\begin{align} F_X(i)&=Pr(X\leq i)\\
-Pr(X=i)&=\comb{5}{i}p^iq^{5-i}
+\begin{align} F_X(i)&=\pr{X\leq i}\\
+\pr{X=i}&=\comb{5}{i}p^iq^{5-i}
 \end{align}
 \begin{align}
  \therefore   F_X(i)=\sum_{r=0}^i\comb{5}{r}p^rq^{5-r}
@@ -296,24 +296,24 @@ F_X(2)&= (0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4\\
 \end{align}
 \begin{enumerate}
 \item  Probability that none of the 5 bulbs fuses is: \begin{align}\label{eq:10}
-    Pr(X=0)=F_X(0) \end{align}
+    \pr{X=0}=F_X(0) \end{align}
 from \eqref{eq:10}
 \begin{align}
 &=0.95^5\\
 &=0.7737809375\end{align}
 \item Probability that not more than one bulb fuses is same as exactly 0 bulb fuses or exactly one bulb fuses:\\
 \begin{align}
-    Pr(X\leq1)=F_X(1)=0.9774075
+    \pr{X\leq1}=F_X(1)=0.9774075
 \end{align}
 
 \item Let A be event that none of the bulbs is fused and B be event that exactly one bulb is fused\\ Probability that more than one bulb will fuse will be:\\
 
-\begin{align}\label{eq:14}&Pr(X\leq 5)-Pr(X\leq 1)\\&=F_X(5)-F_X(1)\end{align}
+\begin{align}\label{eq:14}&\pr{2\leq X\leq 5}\\&=F_X(5)-F_X(1)\end{align}
 from \eqref{eq:14}
 
 \begin{align}=0.0225925\end{align}
 \item Probability that at least one bulb is fused is
- \begin{align}\label{eq:16}&Pr(X\leq 5)-Pr(X\leq 0)\\
+ \begin{align}\label{eq:16}&\pr{1\leq X\leq 5}\\
     &=F_X(5)-F_X(0)
 \end{align}
 from \eqref{eq:16}
