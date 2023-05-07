@@ -269,32 +269,29 @@ It is given that:
   \pr{X=1}+\pr{X=0}=1\\
   \implies \pr{X=0}=\pr{X=1}=0.5
 \end{align}
-Let random variable $Y=1$ for first child and $Y=2$ for second child \\
+Let random variable $i=1$ for first child and $i=2$ for second child \\
 We are supposed to find Probability of both girl child(for some given conditions)
 \begin{align}
-    \implies \pr {X=0,Y=1}\times{\pr{X=0,Y=2}}
+    \implies \pr {X_{i=1}=0}\times{\pr{X_{i=2}=0}}
 \end{align}
 This is because gender of each child is independent of another
 \begin{enumerate} 
     \item If the youngest child is girl:
     \begin{align}
-     \pr{(X=0)(Y=1)}=1\\
-        \therefore\pr{((X=0,Y=1)(X=0,Y=2))|(X=0,Y=1)}\\=\pr{(X=0,Y=2)}=0.5
+     \pr{X_{i=1}=0}=1\\
+        \therefore\pr{(X_{i=1}=0,X_{i=2}=0)|X_{i=1}=0}\\=\pr{X_{i=2}=0}=0.5
     \end{align}
     \item If at least one of the child is girl possible cases are as follows:
     \begin{align}
-        \pr{(X=0,Y=1)(X=0,Y=2)}\\
-        \pr{(X=1,Y=1)(X=0,Y=2)}\\
-        \pr{(X=0,Y=1)(X=1,Y=2)}
+        \pr{X_{i=1}=0,X_{i=2}=0}\\
+        \pr{X_{i=1}=1,X_{i=2}=0}\\
+        \pr{X_{i=1}=0,X_{i=2}=1}
     \end{align}
     and all of the three case are equally likely as probability of a child to be boy or girl is same
     Let event
     \begin{align}
-           A=((X=0,Y=1)(X=0,Y=2))\\
-           B=((X=0,Y=1)+(X=0,Y=2))
-    \end{align}
-   
-    \begin{align}
+         A=\pr{X_{i=1}=0,X_{i=2}=0}\\
+           B=(X_{i=1}=0+X_{i=2}=0)\\
     \therefore\nonumber \pr{A|B}=\frac{1}{3}
     \end{align}
     Alternatively by conditional Probability we have
@@ -302,9 +299,7 @@ This is because gender of each child is independent of another
         \pr{P|Q}=\frac{\pr{PQ}}{\pr{Q}}\\
         \implies\nonumber \pr{A|B}=\frac{\frac{1}{4}}{\frac{3}{4}}\\
         =\frac{1}{3}
-    \end{align}
-    
-    
+    \end{align}   
 \end{enumerate}
 
 
@@ -356,8 +351,5 @@ This is because gender of each child is independent of another
 %\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
 %\numberwithin{equation}{enumi}
 %\numberwithin{equation}{enumi}
-
-
-		
 
 \end{document}
