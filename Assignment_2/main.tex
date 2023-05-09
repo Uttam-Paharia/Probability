@@ -285,18 +285,22 @@ This is because gender of each child is independent of another
     &\implies \pr{X_{2}=0}=0.5
     \end{align}
     \item If at least one of the child is girl:\\
-    Let event:A is both children are girls and\\ B is at least one of them is girl
-    \begin{align}
-         A=\pr{X_{1}=0,X_{2}=0}\\
-           B=(X_{1}=0+X_{2}=0)
-    \end{align}
     By conditional Probability we have
+    \end{enumerate}
     \begin{align}
         \pr{P|Q}=\frac{\pr{PQ}}{\pr{Q}}\\
-        \implies\nonumber \pr{A|B}=\frac{\frac{1}{4}}{\frac{3}{4}}\\
-        =\frac{1}{3}
+        \implies\nonumber \pr{X_{1}=0,X_{2}=0|((X_{1}=0)+(X_{2}=0))}=\\   \label{eq:10}\frac{\pr{X_{1}=0,X_{2}=0}}{\pr{X_{1}=0+X_{2}=0}}\\ 
+        \pr{X_{1}=0+X_{2}=0}=1-\pr{X_1=1,X_2=1}\\=1-\frac{1}{4}=\frac{3}{4}
     \end{align}   
-\end{enumerate}
+        Probability of both are girl given that at least one is girl is\\
+        From \eqref{eq:10}
+        \begin{align}
+            \frac{\frac{1}{4}}{\frac{3}{4}}=
+        \frac{1}{3} 
+        \end{align}
+       
+       
+
 
 
 \newpage
