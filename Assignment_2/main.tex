@@ -279,16 +279,16 @@ This is because gender of each child is independent of another
     \item If the youngest child is girl:\\
     By conditional Probability we have 
     \begin{align}
-            &\pr{(X_{1}=0,X_{2}=0)|X_{1}=0}=\frac{\pr{X_1=0,X_2=0}}{\pr{X_1=0}}\\
-   & \pr{X_1=0,X_2=0}=\pr{X_1=0}\times \pr{X_2=0}\\
+            &\pr{(X_{1}+X_{2}=0)|X_{1}=0}=\frac{\pr{X_1+X_2=0}}{\pr{X_1=0}}\\
+   & \pr{X_1+X_2=0}=\pr{X_1=0}\times \pr{X_2=0}\\
     &\implies \pr{X_{2}=0}=0.5
     \end{align}
     \item If at least one of the child is girl:\\
     By conditional Probability we have
     \end{enumerate}
     \begin{align}      
-    \nonumber \pr{X_{1}=0,X_{2}=0|((X_{1}=0)+(X_{2}=0))}=\\   \label{eq:10}\frac{\pr{X_{1}=0,X_{2}=0}}{\pr{X_{1}=0+X_{2}=0}}\\ 
-        \pr{X_{1}=0+X_{2}=0}=1-\pr{X_1=1,X_2=1}\\=1-\frac{1}{4}=\frac{3}{4}
+    \nonumber \pr{X_{1}+X_{2}=0|(X_{1}+X_{2}\leq 1)}=\\   \label{eq:10}\frac{\pr{X_{1}+X_{2}=0}}{\pr{X_{1}+X_{2}\leq 1 }}\\ 
+        \pr{X_{1}+X_{2}\leq 1}=1-\pr{X_1+X_2=2}\\=1-\frac{1}{4}=\frac{3}{4}
     \end{align}   
         Probability of both are girl given that at least one is girl is\\
         From \eqref{eq:10}
