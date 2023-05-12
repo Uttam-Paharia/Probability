@@ -18,6 +18,7 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
+\usepackage{booktabs}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -263,7 +264,7 @@ two children, what is the conditional probability that both are girls given that
 \end{enumerate}
 \textcolor{cyan}{\textbf{Solution:}}
 Let random variable $X_i=0$, if it is a girl child and $X_i=1$ if it is a boy.\\
-Where $i=1$ for younger child and $i=2$ for elder child.\\
+Where $i=1$ for first child and $i=2$ for second child.\\
 It is given that:
 \begin{align}
   \pr{X_i=1}=\pr{X_i=0}  \\
@@ -275,6 +276,29 @@ We are supposed to find Probability of both girl child(for some given conditions
     \implies \pr {X_{1}=0}\times{\pr{X_{2}=0}}
 \end{align}
 This is because gender of each child is independent of another
+
+\begin{center}
+\begin{tabular}{@{}|l|l|l|@{}}
+\toprule
+ \textbf{Variables} & \textbf{Corresponding child}& \textbf{Probability}\\ \midrule
+ $X_1=0 $      & Younger Girl Child &$\frac{1}{2}$         \\ \midrule
+ $X_1=1 $      & Younger Boy Child & $\frac{1}{2}$ \\  \midrule
+$X_2=0$       & Elder Girl Child  &   $\frac{1}{2}$\\ \midrule
+$X_2=1 $      & Elder Boy Child  &  $\frac{1}{2}$\\ \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{}|l|l|@{}}
+\toprule
+\textbf{Probabilities} & \textbf{Values} \\ \midrule
+ $\pr{X_1+X_2=2}$& $\frac{1}{4}$       \\ \midrule
+$\pr{X_1+X_2=1}$ & $\frac{1}{2}$            \\ \midrule
+ $\pr{X_1+X_2=0}$&$\frac{1}{4}$           \\ \bottomrule
+\end{tabular}
+\end{center}
+
+
 \begin{enumerate} 
     \item If the youngest child is girl:\\
     By conditional Probability we have 
