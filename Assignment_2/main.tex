@@ -4,6 +4,7 @@
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\def\inputGnumericTable{}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -19,11 +20,20 @@
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
 \usepackage{booktabs}
+\usepackage[latin1]{inputenc}                                 %%
+\usepackage{color}                                            %%
+\usepackage{array}                                            %%
+\usepackage{longtable}                                        %%
+\usepackage{calc}                                             %%
+\usepackage{multirow}                                         %%
+\usepackage{hhline}                                           %%
+\usepackage{ifthen}
+
 %
-%\usepackage{setspace}
-%\usepackage{gensymb}
-%\doublespacing
-%\singlespacing
+% \usepackage{setspace}
+% \usepackage{gensymb}
+% \doublespacing
+% \singlespacing
 
 %\usepackage{graphicx}
 %\usepackage{amssymb}
@@ -276,27 +286,18 @@ We are supposed to find Probability of both girl child(for some given conditions
     \implies \pr {X_{1}=0}\times{\pr{X_{2}=0}}
 \end{align}
 This is because gender of each child is independent of another
-
-\begin{center}
-\begin{tabular}{@{}|l|l|l|@{}}
-\toprule
- \textbf{Variables} & \textbf{Corresponding child}& \textbf{Probability}\\ \midrule
- $X_1=0 $      & Younger Girl Child &$\frac{1}{2}$         \\ \midrule
- $X_1=1 $      & Younger Boy Child & $\frac{1}{2}$ \\  \midrule
-$X_2=0$       & Elder Girl Child  &   $\frac{1}{2}$\\ \midrule
-$X_2=1 $      & Elder Boy Child  &  $\frac{1}{2}$\\ \bottomrule
-\end{tabular}
-\end{center}
-
-\begin{center}
-\begin{tabular}{@{}|l|l|@{}}
-\toprule
-\textbf{Probabilities} & \textbf{Values} \\ \midrule
- $\pr{X_1+X_2=2}$& $\frac{1}{4}$       \\ \midrule
-$\pr{X_1+X_2=1}$ & $\frac{1}{2}$            \\ \midrule
- $\pr{X_1+X_2=0}$&$\frac{1}{4}$           \\ \bottomrule
-\end{tabular}
-\end{center}
+\begin{table}[ht!]
+		\centering
+		\input{Tables/table1.tex}
+  \label{table:table1}	
+		  \caption{\textbf{Variables Declaration}}
+	\end{table}\\
+\begin{table}[ht!]
+		\centering
+		\input{Tables/table2.tex}
+		 \caption{\textbf{Some useful Probabilities}}
+		 \label{table:table2}	
+	\end{table}
 
 
 \begin{enumerate} 
