@@ -286,20 +286,29 @@ We are supposed to find Probability of both girl child(for some given conditions
     \implies \pr {X_{1}=0}\times{\pr{X_{2}=0}}
 \end{align}
 This is because gender of each child is independent of another
-\begin{table}[ht!]
+\begin{enumerate}
+    \ \begin{table}[ht!]
 		\centering
 		\input{Tables/table1.tex}
   \label{table:table1}	
 		  \caption{\textbf{Variables Declaration}}
 	\end{table}\\
-\begin{table}[ht!]
+ By \textbf{Moment Generating function} we have :
+ \begin{align}
+     MGF_{X_1}(s)=\frac{1}{2}\times e^{0s} + \frac{1}{2}\times e^{1s}\\ 
+     MGF_{X_2}(s)=\frac{1}{2}\times e^{0s} + \frac{1}{2}\times e^{1s} \\
+     MGF_{X_1+X_2}(s)=MGF_{X_1}(s)\times MGF_{X_2}(s)\\
+     \implies MGF_{X_1+X_2}(s)=\frac{1}{4}\times e^{0s} + \frac{1}{2}\times e^{1s}+\frac{1}{4}\times e^{2s}\\
+      \pr{X_1+X_2=i}=\text{coefficient of }e^{is}
+ \end{align}
+
+  \begin{table}[ht!]
 		\centering
 		\input{Tables/table2.tex}
 		 \caption{\textbf{Some useful Probabilities}}
 		 \label{table:table2}	
 	\end{table}
-
-
+\end{enumerate}
 \begin{enumerate} 
     \item If the youngest child is girl:\\
     By conditional Probability we have 
@@ -312,11 +321,11 @@ This is because gender of each child is independent of another
     By conditional Probability we have
     \end{enumerate}
     \begin{align}      
-    \nonumber \pr{X_{1}+X_{2}=0|(X_{1}+X_{2}\leq 1)}=\\   \label{eq:10}\frac{\pr{X_{1}+X_{2}=0}}{\pr{X_{1}+X_{2}\leq 1 }}\\ 
+    \nonumber \pr{X_{1}+X_{2}=0|(X_{1}+X_{2}\leq 1)}=\\   \label{eq:13}\frac{\pr{X_{1}+X_{2}=0}}{\pr{X_{1}+X_{2}\leq 1 }}\\ 
         \pr{X_{1}+X_{2}\leq 1}=1-\pr{X_1+X_2=2}\\=1-\frac{1}{4}=\frac{3}{4}
     \end{align}   
         Probability of both are girl given that at least one is girl is\\
-        From \eqref{eq:10}
+        From \eqref{eq:13}
         \begin{align}
             \frac{\frac{1}{4}}{\frac{3}{4}}=
         \frac{1}{3} 
