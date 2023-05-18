@@ -25,6 +25,7 @@ def play_music():
     if not paused:
         pygame.mixer.music.load('songs/'+str(songs[current_song])+'.mp3')
         pygame.mixer.music.play()
+        print(str(songs[current_song])+'.mp3')
     else:
         pygame.mixer.music.unpause()
         paused=False
@@ -42,6 +43,7 @@ def next_music():
    current_song=current_song+1
    pygame.mixer.music.load('songs/' + str(songs[current_song]) + '.mp3')
    pygame.mixer.music.play()
+   print(str(songs[current_song])+'.mp3')
 
 def prev_music():
     global current_song, paused
@@ -49,12 +51,13 @@ def prev_music():
         current_song = current_song-1
         pygame.mixer.music.load('songs/' + str(songs[current_song]) + '.mp3')
         pygame.mixer.music.play()
+        print(str(songs[current_song])+'.mp3')
         paused=False
     except:
         pass
 
 
-list=Listbox(root, bg="black",fg="white",height=16,width=50)
+list=Label(root, bg="black",fg="white",height=16,width=50)
 list.pack()
 
 pause_button=PhotoImage(file='pause.png')
