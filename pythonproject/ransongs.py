@@ -44,7 +44,7 @@ def next_music():
    pygame.mixer.music.play()
 
 def prev_music():
-    global current_songs, paused
+    global current_song, paused
     try:
         current_song = current_song-1
         pygame.mixer.music.load('songs/' + str(songs[current_song]) + '.mp3')
